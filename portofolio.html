@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container my-5">
+    <h1>EMILE PEREIRA Christopher</h1>
+    <a href="mailto:christopher.emile@hotmail.fr" type="button" class="btn btn-outline-primary">
+      christopher.emile@hotmail.fr
+    </a>
+    <button id="themeToggleButton" class="btn btn-primary ms-auto">Changer de Thème</button>
+    <p class="lead">
+    Voici quelques uns de mes projets indépendant
+    </p>
+</div>
+
+
+    <!-- ceci est la nav-->
+
+ <div class="container">
+
+    <nav>
+       
+        
+
+            <ul class="nav nav-pills">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="portofolio.html">Portfolio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cv.html">Mon CV</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Me contacter</a>
+              </li>
+           
+            </ul>
+          
+        </div>
+      </nav>
+
+
+      <div class="container mt-5">
+        <h3>Projet autoditacte</h3>
+        <div class="row">
+          <div class="col-lg-3">
+      <div class="card mb-3">
+        <img src="Image/manga.jpg" alt="Manga" class="card-img-top" height="350">
+        <div class="card-body">
+        <h5 class="card-title">Manga art</h5>
+        <p class="card-text">Un site sur les mangas</p>
+        <div class="btn btn-primary">Voir le Site web</div>
+      
+        </div>
+      
+      
+      
+          </div>
+      
+      
+        </div>
+      
+      <div class="col-lg-3">
+        <div class="card mb-3">
+          <img src="Image/console.jpg" alt="Jeux" class="card-img-top" height="350">
+          <div class="card-body">
+          <h5 class="card-title">Jeux Video</h5>
+          <p class="card-text">Un site sur les Jeux Video</p>
+          <div class="btn btn-primary">Voir le Site web</div>
+        
+          </div>
+      </div>
+      
+      </div>
+      <div class="col-lg-3">
+        <div class="card mb-3">
+          <img src="Image/etude.jpg" alt="cours" class="card-img-top" height="350">
+          <div class="card-body">
+          <h5 class="card-title">Cours en Ligne</h5>
+          <p class="card-text">Cours en lignes</p>
+          <div class="btn btn-primary">Voir le Site web</div>
+        
+          </div>
+      </div>
+      
+      </div>
+      </div>
+      
+
+
+
+
+      <div id="carouselExample" class="carousel slide mb-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Image/carousel4.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Image/carousel3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Image/carousel2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Image/carousel1.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+
+      <script>
+        // JavaScript pour changer le thème
+        const themeToggleButton = document.getElementById('themeToggleButton');
+        const body = document.body;
+      
+        themeToggleButton.addEventListener('click', () => {
+          // Vérifie le thème actuel
+          const currentTheme = body.getAttribute('data-bs-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+          // Met à jour le thème
+          body.setAttribute('data-bs-theme', newTheme);
+      
+          // Optionnel : Mettez à jour le texte du bouton
+          themeToggleButton.textContent = newTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
+        });
+      </script>
+      
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>

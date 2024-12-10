@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container my-5">
+    <h1>EMILE PEREIRA Christopher</h1>
+    <a href="mailto:christopher.emile@hotmail.fr" type="button" class="btn btn-outline-primary">
+      christopher.emile@hotmail.fr
+    </a>
+    <button id="themeToggleButton" class="btn btn-primary ms-auto">Changer de Thème</button>
+    <p class="lead">
+     Retrouver ici mes coordonnées pour tout contact ou information
+    </p>
+</div>
+
+
+    <!-- ceci est la nav-->
+
+ <div class="container">
+
+    <nav>
+       
+        
+
+            <ul class="nav nav-pills">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="portofolio.html">Portfolio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cv.html">Mon CV</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Me contacter</a>
+              </li>
+           
+            </ul>
+          
+        </div>
+      </nav>
+
+      <div class="container mt-3">
+
+      <ol class="list-group">
+        <li class="list-group-item">numéro : 06 58 72 61 95 </li>
+        <li class="list-group-item">Adresse : Paris / Val-de-Marne</li>
+        <li class="list-group-item">Facebook </li>
+        <li class="list-group-item">Instagram</li>
+        <li class="list-group-item">Linkedin</li>
+      </ol>
+</div>
+
+
+<script>
+  // JavaScript pour changer le thème
+  const themeToggleButton = document.getElementById('themeToggleButton');
+  const body = document.body;
+
+  themeToggleButton.addEventListener('click', () => {
+    // Vérifie le thème actuel
+    const currentTheme = body.getAttribute('data-bs-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    // Met à jour le thème
+    body.setAttribute('data-bs-theme', newTheme);
+
+    // Optionnel : Mettez à jour le texte du bouton
+    themeToggleButton.textContent = newTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
+  });
+</script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+    </body>
+  </html>
