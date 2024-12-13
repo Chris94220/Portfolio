@@ -56,18 +56,25 @@
       <div class="container mt-3">
 
       <ol class="list-group">
-        <li class="list-group-item">Adresse : Paris / Val-de-Marne - Possibilité de travaillé </li>
-        <li class="list-group-item"><a href="https://www.facebook.com" target="_blank">Facebook</a> </li>
-        <li class="list-group-item">Instagram</li>
-        <li class="list-group-item">Linkedin</li>
+        <li class="list-group-item"> Localisation :<a href="https://maps.app.goo.gl/7Bv4FFUU5qHRStAE9" target="_blank" style="text-decoration: none;"> Paris / Val-de-Marne </a> - Vehiculé et Equipé aussi pour travaillé en distanciel </li>
+        <li class="list-group-item">Adresse Mail:<a href="mailto:christopher.emile@hotmail.fr" style="text-decoration: none;"> christopher.emile@hotmail.fr</a></li>
+        <li class="list-group-item">Compte : <a href="https://www.linkedin.com/in/christopher-emile-pereira-609797240/" target="_blank" style="text-decoration: none;">Linkedin </a></li>
+        <li class="list-group-item">Compte : <a href="https://github.com/Chris94220" target="_blank" style="text-decoration: none;">Github</a></li>
       </ol>
 </div>
 
 
 <script>
-  // JavaScript pour changer le thème
+  // JavaScript pour changer le thème avec sauvegarde
   const themeToggleButton = document.getElementById('themeToggleButton');
   const body = document.body;
+
+  // Charger le thème enregistré
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.setAttribute('data-bs-theme', savedTheme);
+    themeToggleButton.textContent = savedTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
+  }
 
   themeToggleButton.addEventListener('click', () => {
     // Vérifie le thème actuel
@@ -77,7 +84,10 @@
     // Met à jour le thème
     body.setAttribute('data-bs-theme', newTheme);
 
-    // Optionnel : Mettez à jour le texte du bouton
+    // Sauvegarde le choix du thème
+    localStorage.setItem('theme', newTheme);
+
+    // Met à jour le texte du bouton
     themeToggleButton.textContent = newTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
   });
 </script>

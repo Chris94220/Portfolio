@@ -16,7 +16,7 @@
     </a>
     <button id="themeToggleButton" class="btn btn-primary ms-auto">Changer de Thème</button>
     <p class="lead">
-    Voici quelques uns de mes projets indépendant
+    Voici quelques uns de mes projets indépendant en autodidacte, ils ne sont pas encore finalisés.
     </p>
 </div>
 
@@ -55,15 +55,15 @@
 
 
       <div class="container mt-5">
-        <h3>Projet autoditacte</h3>
+        <h3>Projet autodidacte (en cours)</h3>
         <div class="row">
           <div class="col-lg-3">
       <div class="card mb-3">
-        <img src="Image/manga.jpg" alt="Manga" class="card-img-top" height="350">
+        <a href="https://chris94220.github.io/Manga-Art/" target="_blank"><img src="Image/manga.jpg" alt="Manga" class="card-img-top" height="350"></a>
         <div class="card-body">
         <h5 class="card-title">Manga art</h5>
         <p class="card-text">Un site sur les mangas</p>
-        <div class="btn btn-primary">Voir le Site web</div>
+        <a href="https://chris94220.github.io/Manga-Art/" target="_blank" class="btn btn-primary">Voir le Site web</a>
       
         </div>
       
@@ -76,23 +76,22 @@
       
       <div class="col-lg-3">
         <div class="card mb-3">
-          <img src="Image/console.jpg" alt="Jeux" class="card-img-top" height="350">
+          <a href="https://chris94220.github.io/Site-Jeux-Video/index.html" target="_blank"><img src="Image/console.jpg" alt="Jeux" class="card-img-top" height="350"></a>
           <div class="card-body">
           <h5 class="card-title">Jeux Video</h5>
-          <p class="card-text">Un site sur les Jeux Video</p>
-          <div class="btn btn-primary">Voir le Site web</div>
-        
+          <p class="card-text">Un site sur les jeux video</p>
+          <a href="https://chris94220.github.io/Site-Jeux-Video/index.html" target="_blank" class="btn btn-primary">Voir le Site web</a>
           </div>
       </div>
       
       </div>
       <div class="col-lg-3">
         <div class="card mb-3">
-          <img src="Image/etude.jpg" alt="cours" class="card-img-top" height="350">
+          <a href="https://chris94220.github.io/Site-de-Cours/" target="_blank*"> <img src="Image/etude.jpg" alt="cours" class="card-img-top" height="350"></a>
           <div class="card-body">
           <h5 class="card-title">Cours en Ligne</h5>
-          <p class="card-text">Cours en lignes</p>
-          <div class="btn btn-primary">Voir le Site web</div>
+          <p class="card-text">Un site de cours en lignes</p>
+          <a href="https://chris94220.github.io/Site-de-Cours/" target="_blank*" class="btn btn-primary">Voir le Site web</a>
         
           </div>
       </div>
@@ -110,13 +109,13 @@
             <img src="Image/carousel4.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="Image/carousel3.png" class="d-block w-100" alt="...">
+            <a href="https://chris94220.github.io/Manga-Art/" target="_blank*"><img src="Image/carousel3.png" class="d-block w-100" alt="..."></a>
           </div>
           <div class="carousel-item">
-            <img src="Image/carousel2.png" class="d-block w-100" alt="...">
+            <a href="https://chris94220.github.io/Site-Jeux-Video/index.html" target="_blank*"><img src="Image/carousel2.png" class="d-block w-100" alt="..."></a>
           </div>
           <div class="carousel-item">
-            <img src="Image/carousel1.png" class="d-block w-100" alt="...">
+            <a href="https://chris94220.github.io/Site-de-Cours/" target="_blank*"><img src="Image/carousel1.png" class="d-block w-100" alt="..."></a>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -131,11 +130,17 @@
 
 
 
-
       <script>
-        // JavaScript pour changer le thème
+        // JavaScript pour changer le thème avec sauvegarde
         const themeToggleButton = document.getElementById('themeToggleButton');
         const body = document.body;
+      
+        // Charger le thème enregistré
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          body.setAttribute('data-bs-theme', savedTheme);
+          themeToggleButton.textContent = savedTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
+        }
       
         themeToggleButton.addEventListener('click', () => {
           // Vérifie le thème actuel
@@ -145,11 +150,13 @@
           // Met à jour le thème
           body.setAttribute('data-bs-theme', newTheme);
       
-          // Optionnel : Mettez à jour le texte du bouton
+          // Sauvegarde le choix du thème
+          localStorage.setItem('theme', newTheme);
+      
+          // Met à jour le texte du bouton
           themeToggleButton.textContent = newTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
         });
       </script>
-      
 
 
 

@@ -17,7 +17,8 @@
     <button id="themeToggleButton" class="btn btn-primary ms-auto">Changer de Thème</button>
     <p class="lead">
      Ayant obtenue plusieurs certifications dans l'informatique allant du niveau Bac à BTS, technicien Assisstant informatique, technicien supérieur Système et Reseaux et Développeur web et web Mobile, 
-     ayant aussi occupé plusieurs poste dans l'informatique tel que : gestionnaire de parc informatique(4000 utilisateurs)et ainsi que technicien d'exploitation informatique(supervision de datacenter)je suis à la recherche d'un poste junior dans le develloppement.
+     ayant aussi occupé plusieurs poste dans l'informatique tel que : gestionnaire de parc informatique(4000 utilisateurs)et ainsi que technicien d'exploitation informatique(supervision de datacenter).
+     <br>Vous retrouverer sur cette page des informations sur mon parcours professionnelle ainsi que mon savoir faire personnelle et technique dans le monde du travail. 
     </p>
 </div>
 
@@ -69,7 +70,7 @@
       <div class="mx-3">
             <h4>Conseil Départemental du Val-de-Marne</h4>
             <div>  <strong>2023-à aujourd'hui</strong></div>
-            Technicien d'exploitation mes principals missions sont la supervision d'un datacenter le rackage et décommissionnement de serveurs.
+            Technicien d'exploitation mes principales missions sont la supervision d'un datacenter le rackage et décommissionnement de serveurs.
       </div>
             <ul class="list-group list-group-flush mt-2">
       <li class="list-group-item">Rackage/décommissionnement</li>
@@ -86,7 +87,7 @@
       <div class="mx-3">
           <h4>Bpi</h4>
           <div>  <strong>2023 (10mois)</strong></div>
-           Gestionnaire de parc informatique mes missions étaient la masterisation de poste ainsi que l'installation d'écran, clavier-souris, et stations d'accueil.
+           Gestionnaire de parc informatique mes missions étaient la masterisation de poste ainsi que l'installation d'écran, clavier-souris, et stations d'accueil pour les nouveaux arrivants.
       </div>
           <ul class="list-group list-group-flush mt-2">
       <li class="list-group-item">Masterisation</li>
@@ -102,7 +103,7 @@
     <div class="mx-3">
         <h4>Carrefour</h4>
         <div>  <strong>2010-2019</strong></div>
-         Equipier de vente mes principales missions était la mise en rayons la gestion de mon stock et le suivis des ventes.
+         Equipier de vente mes principales missions étaient la mise en rayons la gestion de mon stock et le suivis des ventes.
     </div>
         <ul class="list-group list-group-flush mt-2">
     <li class="list-group-item">Mise en Rayon</li>
@@ -123,7 +124,7 @@
       <ul class="list-group list-group-flush mt-2">
   <li class="list-group-item">Inspection de retour de location</li>
   <li class="list-group-item">Remplacement de pièces défféctueuses</li>
-  <li class="list-group-item">Maintenance de bon fonctionnnement</li>
+  <li class="list-group-item">Maintenance et veille du bon fonctionnnement du matériel</li>
   
       </ul>
     
@@ -151,6 +152,7 @@
             <li>Ponctualité</li>
             <li>Sens du Partage</li>
             <li>Discrétion</li>
+            <li>Organisation</li>
           </ul>
            
            </div>
@@ -246,14 +248,21 @@
       <div class="container mt-5">
       
         <div class="ratio ratio-16x9 mb-5">
-            <iframe src="image/CV 2024.pdf" frameborder="0"></iframe>
+            <iframe src="image/CV.pdf" frameborder="0"></iframe>
         </div>
     </div>
 
     <script>
-      // JavaScript pour changer le thème
+      // JavaScript pour changer le thème avec sauvegarde
       const themeToggleButton = document.getElementById('themeToggleButton');
       const body = document.body;
+    
+      // Charger le thème enregistré
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        body.setAttribute('data-bs-theme', savedTheme);
+        themeToggleButton.textContent = savedTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
+      }
     
       themeToggleButton.addEventListener('click', () => {
         // Vérifie le thème actuel
@@ -263,7 +272,10 @@
         // Met à jour le thème
         body.setAttribute('data-bs-theme', newTheme);
     
-        // Optionnel : Mettez à jour le texte du bouton
+        // Sauvegarde le choix du thème
+        localStorage.setItem('theme', newTheme);
+    
+        // Met à jour le texte du bouton
         themeToggleButton.textContent = newTheme === 'light' ? 'Passer au thème sombre' : 'Passer au thème clair';
       });
     </script>
